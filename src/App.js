@@ -1,7 +1,7 @@
 import React from "react";
 import logo from "./logo.svg";
 import "./App.css";
-import useInstallPWA from "./InstallPWA";
+import UseInstallPWA from "./InstallPWA";
 
 function App() {
   return (
@@ -19,7 +19,7 @@ function App() {
         >
           Learn React
         </a>
-        <useInstallPWA />
+        <UseInstallPWA />
       </header>
     </div>
   );

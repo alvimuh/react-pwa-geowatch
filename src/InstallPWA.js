@@ -5,6 +5,7 @@ const useInstallPWA = () => {
   const [promptInstall, setPromptInstall] = useState(null);
 
   useEffect(() => {
+    console.log("UsePWA");
     const handler = (e) => {
       e.preventDefault();
       console.log("we are being triggered :D");
