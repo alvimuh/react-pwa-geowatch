@@ -24,8 +24,35 @@
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+button {
+  width: 200px;
+  margin-bottom: 8px;
+}
+h3 {
+  margin-bottom: 0;
+}
+table {
+  font-size: 12px;
+  border-collapse: collapse;
+}
+table,
+td,
+th {
+  border: 1px solid #ffffff65;
+  padding: 5px;
+}
+.counter {
+  display: flex;
+  justify-content: space-between;
+}
+.counter p {
+  margin: 20px;
+  font-size: 14px;
+  text-align: left;
+}
+.counter p span {
+  display: block;
+  font-size: 18px;
 }
 
 @keyframes App-logo-spin {
