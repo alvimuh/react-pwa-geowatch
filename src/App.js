@@ -192,7 +192,7 @@ function App() {
                       <td>{item.heading}</td>
                       <td>{item.latitude}</td>
                       <td>{item.longitude}</td>
-                      <td>{item.innerPerum.toString()}</td>
+                      <td>{item.innerPerum? "✔️":"❌"}</td>
                     </tr>
                   ))
                   .reverse()}
