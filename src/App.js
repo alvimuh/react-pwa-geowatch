@@ -97,7 +97,8 @@ function App() {
   }
 
   useEffect(() => {
-    console.log(geoWatch);
+    window.alert(geoWatch);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const countInRange = () => {
