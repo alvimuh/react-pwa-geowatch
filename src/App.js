@@ -96,11 +96,6 @@ function App() {
     geoWatch = undefined;
   }
 
-  useEffect(() => {
-    window.alert(geoWatch);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
-
   const countInRange = () => {
     const count = data.filter(function (item) {
       return item.innerPerum;
@@ -171,59 +166,63 @@ function App() {
             last updated
           </p>
         </div>
-        <table>
-          <thead>
-            <tr>
-              <th>date</th>
-              <th>accuracy</th>
-              <th>altitude</th>
-              <th>altitudeAccuracy</th>
-              <th>heading</th>
-              <th>latitude</th>
-              <th>longitude</th>
-              <th>innerRange</th>
-            </tr>
-          </thead>
-          <tbody>
-            {data &&
-              data
-                .map((item) => (
-                  <tr>
-                    <td>{new Date(item.date).toLocaleString()}</td>
-                    <td>{item.accuracy}</td>
-                    <td>{item.altitude}</td>
-                    <td>{item.altitudeAccuracy}</td>
-                    <td>{item.heading}</td>
-                    <td>{item.latitude}</td>
-                    <td>{item.longitude}</td>
-                    <td>{item.innerPerum.toString()}</td>
-                  </tr>
-                ))
-                .reverse()}
-          </tbody>
-        </table>
+        <div className="scroll">
+          <table>
+            <thead>
+              <tr>
+                <th>date</th>
+                <th>accuracy</th>
+                <th>altitude</th>
+                <th>altitudeAccuracy</th>
+                <th>heading</th>
+                <th>latitude</th>
+                <th>longitude</th>
+                <th>innerRange</th>
+              </tr>
+            </thead>
+            <tbody>
+              {data &&
+                data
+                  .map((item) => (
+                    <tr>
+                      <td>{new Date(item.date).toLocaleString()}</td>
+                      <td>{item.accuracy}</td>
+                      <td>{item.altitude}</td>
+                      <td>{item.altitudeAccuracy}</td>
+                      <td>{item.heading}</td>
+                      <td>{item.latitude}</td>
+                      <td>{item.longitude}</td>
+                      <td>{item.innerPerum.toString()}</td>
+                    </tr>
+                  ))
+                  .reverse()}
+            </tbody>
+          </table>
+        </div>
         <h3>Error log</h3>
-        <table>
-          <thead>
-            <tr>
-              <th>date</th>
-              <th>code</th>
-              <th>message</th>
-            </tr>
-          </thead>
-          <tbody>
-            {errorLog &&
-              errorLog
-                .map((item) => (
-                  <tr>
-                    <td>{new Date(item.date).toLocaleString()}</td>
-                    <td>{item.code}</td>
-                    <td>{item.message}</td>
-                  </tr>
-                ))
-                .reverse()}
-          </tbody>
-        </table>
+        <div className="scroll">
+          <table>
+            <thead>
+              <tr>
+                <th>date</th>
+                <th>code</th>
+                <th>message</th>
+              </tr>
+            </thead>
+            <tbody>
+              {errorLog &&
+                errorLog
+                  .map((item) => (
+                    <tr>
+                      <td>{new Date(item.date).toLocaleString()}</td>
+                      <td>{item.code}</td>
+                      <td>{item.message}</td>
+                    </tr>
+                  ))
+                  .reverse()}
+            </tbody>
+          </table>
+        </div>
       </header>
     </div>
   );
