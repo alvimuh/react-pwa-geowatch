@@ -23,12 +23,12 @@ export default function Weather() {
     //   </ul>
     // </nav>
     <section>
-      {data ? (
+      {data ? data.map((itm,index) => (
         <div className="weather-wrap">
-          <h1>{data[21].kota}</h1>
-          <p>{data[21].provinsi}</p>
+          <h1>{itm.kota}</h1>
+          <p>{itm.provinsi}</p>
           <div className="parameter-wrap">
-            {data[21].parameter.map((item, index) => (
+            {itm.parameter.map((item, index) => (
               <div className="parameter-item" key={index}>
                 <small>{item.date}</small>
                 <p>{getCuaca(item.weather_day)}</p>
@@ -36,7 +36,7 @@ export default function Weather() {
             ))}
           </div>
         </div>
-      ) : (
+      )) : (
         <p style={{ padding: "50px" }}>"Loading..."</p>
       )}
     </section>
