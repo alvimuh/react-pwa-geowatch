@@ -45,33 +45,33 @@ export default function Weather() {
 function getCuaca(code) {
   switch (parseInt(code)) {
     case 0 || 100:
-      return "Cerah / Clear Skies";
+      return "☀️ Clear Skies";
     case 1 || 101:
-      return "Cerah Berawan / Partly Cloudy";
+      return "🌤️ Partly Cloudy";
     case 2 || 102:
-      return "Cerah Berawan / Partly Cloudy";
+      return "🌤️ Partly Cloudy";
     case 3 || 103:
-      return "Berawan / Mostly Cloudy";
+      return "⛅ Mostly Cloudy";
     case 4 || 104:
-      return "Berawan Tebal / Overcast";
+      return "☁️ Overcast";
     case 5:
-      return "Udara Kabur / Haze";
+      return "🌫️ Haze";
     case 10:
-      return "Asap / Smoke";
+      return "🌁 Smoke";
     case 45:
-      return "Kabut / Fog";
+      return "🌫️ Fog";
     case 60:
-      return "Hujan Ringan / Light Rain";
+      return "🌦️ Light Rain";
     case 61:
-      return "Hujan Sedang / Rain";
+      return "🌧️ Rain";
     case 63:
-      return "Hujan Lebat / Heavy Rain";
+      return "🌧️ Heavy Rain";
     case 80:
-      return "Hujan Lokal / Isolated Shower";
+      return "🌧️ Isolated Shower";
     case 95:
-      return "Hujan Petir / Severe Thunderstorm";
+      return "⛈️ Severe Thunderstorm";
     case 97:
-      return "Hujan Petir / Severe Thunderstorm";
+      return "⛈️ Severe Thunderstorm";
     default:
       return "Tidak ada";
   }
