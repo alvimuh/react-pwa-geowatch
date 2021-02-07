@@ -1,7 +1,5 @@
-import React, { useEffect, useState } from "react";
-import logo from "./logo.svg";
 import "./App.css";
-import UseInstallPWA from "./InstallPWA";
+import InstallPWA from "./InstallPWA";
 import WeatherPage from "./pages/weather";
 import GPSPage from "./pages/gps";
 import { Switch, Route, BrowserRouter as Router, Link } from "react-router-dom";
@@ -22,7 +20,12 @@ function App() {
       <Switch>
         <Route path="/weather" component={WeatherPage} />
         <Route path="/gps" component={GPSPage} />
-        <Route path="/">Home</Route>
+        <Route path="/">
+<div>
+Home
+<InstallPWA/>
+</div>
+</Route>
       </Switch>
     </Router>
   );
