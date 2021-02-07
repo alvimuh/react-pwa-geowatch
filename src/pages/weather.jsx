@@ -30,7 +30,7 @@ export default function Weather() {
           <div className="parameter-wrap">
             {data[21].parameter.map((item, index) => (
               <div className="parameter-item" key={index}>
-                <small>{new Date(parseInt(item.date)).toDateString()}</small>
+                <small>{item.date}</small>
                 <p>{getCuaca(item.weather_day)}</p>
               </div>
             ))}
